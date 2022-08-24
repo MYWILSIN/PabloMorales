@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- saved from url=(0018)https://shrtco.de/ -->
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Acortador</title>
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+
+<script type = "text/javascript">
+
+var count = 2;
+function validate() {
+var un = document.myform.username.value;
+var pw = document.myform.pword.value;
+var valid = false;
+
+var unArray = ["wilson", "pablo"];  // as many as you like - no comma after final entry
+var pwArray = ["wilson17", "pablo2022"];  // the corresponding passwords;
+
+for (var i=0; i <unArray.length; i++) {
+if ((un == unArray[i]) && (pw == pwArray[i])) {
+valid = true;
+break;
+}
+}
+
+if (valid) {
+alert ("Bienvenido");
+window.location = "https://mywilsin.github.io/pablomorales/acorter.html";
+return false;
+}
+
+var t = "  intentos";
+if (count == 1) {t = " intento"}
+
+if (count >= 1) {
+alert ("Nombre de usuario o contraseña no válidas " + count + t + " left.");
+document.myform.username.value = "";
+document.myform.pword.value = "";
+setTimeout("document.myform.username.focus()", 25);
+setTimeout("document.myform.username.select()", 25);
+count --;
+}
+
+else {
+alert ("Contraseña o usuario incorrectos tienes 3 intentos ");
+document.myform.username.value = "Usuario restringido, Comunicarse con soporte !!!";
+document.myform.pword.value = "";
+document.myform.username.disabled = true;
+document.myform.pword.disabled = true;
+return false;
+}
+
+}
+
+</script>
+
+<form name = "myform"><br></br>
+<p>   USUARIO   :<input type="text" name="username"> <br></br>CONTRASEÑA <input type="password" name="pword">                                                                                            
+            
+<br></br><input type="button" value="INGRESAR" name="Submit" onclick= "validate()">
+</p>
+
+</form>
+
+
+
+  <link rel="stylesheet" href="./Link Shortener · shrtcode_files/style.css">
+ 
+ 
+
+
+
+</body></html>

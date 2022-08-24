@@ -1,0 +1,2 @@
+//tibush analytics v1.2
+if("object"==typeof Intl&&""!=Intl.DateTimeFormat().resolvedOptions().timeZone)tk();else{var p=document.createElement("script");p.src="https://polyfill.io/v3/polyfill.js?callback=tk&features=Intl",document.head.appendChild(p)}function tk(){var e=document.referrer;""==e&&performance.navigation.type==performance.navigation.TYPE_RELOAD&&(e=window.location.href),navigator.sendBeacon("https://tibushlabs.de/a/post",Intl.DateTimeFormat().resolvedOptions().timeZone+"|"+e)}
