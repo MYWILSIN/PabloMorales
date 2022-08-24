@@ -28,7 +28,7 @@ break;
 
 if (valid) {
 alert ("Bienvenido");
-window.location = "https://mywilsin.github.io/PabloMorales/acorter.html";
+window.location = "https://mywilsin.github.io/pablomorales/acorter.html";
 return false;
 }
 
